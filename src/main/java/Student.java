@@ -10,19 +10,19 @@ public class Student{
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public int getAge(){
-        return age;
+        return this.age;
     }
 
     public String getStudentNumber(){
-        return studentNumber;
+        return this.studentNumber;
     }
 
     public String toString(){
-        return thisname+","+this.age+"-"+this.studentNumber;
+        return this.name+","+this.age+"-"+this.studentNumber;
     }
 
     public boolean equals(Object obj){
