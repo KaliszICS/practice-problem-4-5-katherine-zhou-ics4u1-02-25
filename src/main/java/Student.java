@@ -22,15 +22,17 @@ public class Student{
     }
 
     public String toString(){
-        return this.name+","+this.age+"-"+this.studentNumber;
+        return this.name+", "+this.age+" - "+this.studentNumber;
     }
 
     public boolean equals(Object obj){
-        Student student = (Student)obj;
-        if (student.getStudentNumber().equals(this.studentNumber)){
+        if(obj==null || !obj.getClass().equals(this.getClass())){
+            return false;
+        }
+        Student student=(Student)obj;
+        if(student.getStudentNumber().equals(this.studentNumber)){
             return true;
         }
         return false;
-
     }
 }

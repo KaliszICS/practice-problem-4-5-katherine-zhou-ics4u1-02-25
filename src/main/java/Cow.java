@@ -22,12 +22,15 @@ public class Cow {
     }
 
     public String toString (){
-        return this.name + "," + this.age + "-" + this.weight;
+        return this.name + ", " + this.age + " - " + this.weight;
     }
 
-    public boolean equals (Object obj){
-        Cow cow = (Cow) obj;
-        if (cow.getName().equals(this.name)&& cow.getAge()== this.age &&cow.getWeight()==this.weight){
+    public boolean equals(Object obj){
+        if(obj==null || !obj.getClass().equals(this.getClass())){
+            return false;
+        }
+        Cow cow=(Cow) obj;
+        if(cow.getName().equals(this.name) && cow.getAge()== this.age && cow.getWeight()==this.weight){
             return true;
         }
         return false;
